@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+
+  height: 30px;
+  margin-top: 10px;
+  padding: 0 12px;
+
+  transition: opacity 300ms linear;
+  vertical-align: middle;
+  text-decoration: none;
+
+  opacity: .8;
+  color: $button-text-color;
+  border-radius: 20px;
+  background: $white;
+
+  font-size: 13px;
+  line-height: 30px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .header--fixed & {
+    color: $white;
+    background: $brand-color;
+  }
+}

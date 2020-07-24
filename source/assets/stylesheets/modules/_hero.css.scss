@@ -1,0 +1,84 @@
+.hero {
+  position: relative;
+
+  overflow: hidden;
+
+  max-height: 600px;
+  padding: 0 10px;
+
+  color: $white;
+
+  h1 {
+    margin: 5% 0 8px;
+
+    letter-spacing: -.05ex;
+
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+
+    @media (max-width: 780px) {
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+
+  p {
+    font-size: 22px;
+
+    @media (max-width: 780px) {
+      font-size: 16px;
+    }
+  }
+
+  &__image {
+    @media (max-width: 700px) {
+      height: 600px;
+      margin-left: -20%;
+    }
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding-top: 100px;
+
+    text-align: center;
+
+    background: rgba($dark-bg, .3);
+  }
+
+  &__action {
+    display: inline-block;
+    overflow: hidden;
+
+    height: 64px;
+    margin: 20px 10px 0;
+
+    color: $white;
+    border-radius: 5px;
+    background: $black;
+
+    line-height: 64px;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &--cover {
+    height: 600px;
+
+    background-image: image-url("hero_400.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+
+    @media (min-width: 400px) {
+      background-image: image-url("hero_700.jpg");
+    }
+  }
+}

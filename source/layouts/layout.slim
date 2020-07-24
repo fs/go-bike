@@ -1,0 +1,79 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    meta content=current_page.data.title name="keywords"
+    meta content=current_page.data.title name="description"
+    title = current_page.data.title
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"
+    link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"
+    link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"
+    link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"
+    link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"
+    link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"
+    link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"
+    link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"
+    link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"
+    link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png"
+    link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"
+    link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"
+    link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"
+    link rel="manifest" href="/manifest.json"
+    meta name="msapplication-TileColor" content="#ffffff"
+    meta name="msapplication-TileImage" content="/ms-icon-144x144.png"
+    meta name="theme-color" content="#ffffff"
+    == stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=cyrillic"
+    == stylesheet_link_tag "application"
+    == stylesheet_link_tag "desktop", media: "(min-width: 400px)"
+    == javascript_include_tag "yandex_metrika"
+
+  body
+    noscript
+      div
+        img alt="" src="https://mc.yandex.ru/watch/46038981" style=("position:absolute; left:-9999px;")
+    header.header
+       == link_to image_tag("logo.svg", class: "logo", alt: "Go-bike"), "/", class: "logo--xs"
+       .nav
+         .phone-number
+          | ‭+7 (950) 948-19-92‬
+         == link_to "КАРТА ПАРКОВОК", "https://www.google.com/maps/d/u/0/embed?mid=1THzyRn-Z3xgW1p8fvmfMbRzgsmY", class: "button", target: :_blank
+
+    = yield
+
+    footer.footer
+      == link_to image_tag("footer_logo.png", class: "logo", alt: "Go Bike"), "http://www.go-bike.co/"
+
+      .social-accounts
+        == link_to image_tag("facebook.svg", alt: "Facebook"), "http://facebook.com/gobike.almet"
+        == link_to image_tag("instagram.svg", alt: "Instagram"), "https://instagram.com/gobikealmet/"
+        == link_to image_tag("twitter.svg", alt: "Twitter"), "http://twitter.com/gobikealmet"
+        == link_to image_tag("youtube.svg", alt: "Youtube"), "https://youtu.be/HjkB4kWpDnE"
+        == link_to image_tag("vk.svg", alt: "VK"), "http://vk.com/gobikealmet"
+
+      p
+        | © 2018 GoBike
+        br
+        | г.Альметьевск
+        br
+        | По вопросам сотрудничества
+        '
+        == mail_to "admin@go-bike.co"
+      p
+        ' ООО «ОБАЙК» |
+        ' ОГРН 1171690046131 |
+
+        == link_to "Карта партнёра",
+                   "resources/for_partners.pdf",
+                   download: "for_partners.pdf"
+      p
+        == link_to "Пользовательское соглашение", "resources/agreement-gobike.pdf",
+                   download: "agreement-gobike.pdf"
+        '   |
+        == link_to "Политика конфиденциальности", "resources/privacy-policy-gobike.pdf", download: "privacy-policy-gobike.pdf"
+
+  script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.3.3/lory.min.js"
+  = javascript_include_tag "application"
+    - if build?
+      = google_analytics_tag

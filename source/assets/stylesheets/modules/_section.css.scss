@@ -1,0 +1,135 @@
+.section {
+  position: relative;
+
+  img {
+    max-width: 100%;
+    margin-bottom: -5px;
+  }
+
+  &--app {
+    padding-top: 80px;
+
+    text-align: center;
+
+    color: $white;
+    background: $dark-bg;
+
+    img {
+      max-height: 360px;
+      margin: 10px 0 -5px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+
+    img {
+      max-height: 560px;
+    }
+  }
+
+  &__wrap {
+    max-width: 100%;
+    margin: 0 auto;
+
+    &--fixed {
+      width: 1170px;
+    }
+  }
+
+  &__description {
+    p {
+      color: $light-text-color;
+    }
+
+    h2 {
+      line-height: 36px;
+
+      @media (max-width: 500px) {
+        max-width: 100%;
+        margin: 0 0 10px;
+      }
+
+      @media (max-width: 1160px) and (min-width: 990px) {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 780px) {
+      padding: 80px 15px;
+    }
+
+    @media (max-width: 1160px) {
+      margin-left: 0;
+    }
+
+    &--steps {
+      max-width: 600px;
+      margin: auto;
+
+      @media (max-width: 780px) {
+        padding: 50px 0 0;
+      }
+    }
+  }
+
+  &--reviews {
+    overflow: hidden;
+
+    padding: 50px 10px;
+
+    text-align: center;
+
+    background: darken($white, 3.92);
+  }
+
+  &--covered {
+    background-image: image-url("cover_400.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  &__container {
+    max-width: 100%;
+    padding: 200px 10% 200px 50%;
+
+    color: $white;
+    background: rgba($dark-bg, .3);
+
+    @media (max-width: 780px) {
+      padding: 50px 15px;
+
+      text-align: left;
+
+      background: rgba($black, .6);
+    }
+  }
+
+  @media (max-width: 780px) {
+    text-align: center;
+  }
+}
+
+.video {
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.video-description {
+  @media (max-width: 400px) {
+    padding-top: 30px;
+
+    text-align: left;
+
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// core/settings centers on two things:
+// * @font-face declarations
+// * App-wide settings and variables
+
+// Color scheme
+$dark-bg: #1a1c1d;
+$white: #fff;
+$black: #000;
+$brand-color: #ef5740;
+$dark-gray: #262930;
+
+$text-color: #263238;
+$light-text-color: #7c7c7c;
+$title-color: $dark-gray;
+$button-text-color: #334148;
+
+$slider-dot-default-bg: #e5e5e5;
+$slider-dot-active-bg: #263238;

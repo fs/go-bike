@@ -1,0 +1,42 @@
+.footer {
+  padding: 70px 0;
+
+  text-align: center;
+
+  color: lighten($dark-gray, 50%);
+  background: $dark-gray;
+
+  font-size: 13px;
+
+  a {
+    white-space: nowrap;
+
+    color: lighten($dark-gray, 50%);
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .logo {
+    width: 150px;
+    margin-bottom: 50px;
+
+    opacity: .8;
+  }
+}
+
+.social-accounts {
+  img {
+    width: 40px;
+    margin: 0 10px 20px;
+  }
+
+  a {
+    opacity: .7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

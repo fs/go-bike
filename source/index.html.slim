@@ -1,0 +1,87 @@
+---
+title: Удобная аренда велосипеда — GoBike Альметьевск
+---
+
+body
+  .hero.hero--cover
+    .hero__wrap
+      h1 Удобная аренда велосипеда
+      p
+        | Впервые в России велосипед можно забронировать с помощью телефона
+
+      == link_to image_tag("googleplay.png", alt: "Доступно в Google Play"),
+                 "https://play.google.com/store/apps/details?id=com.pgt.gobike",
+                 class: "hero__action"
+
+      == link_to image_tag("appstore.png", alt: "Загрузите в App Store"),
+                 "https://itunes.apple.com/ru/app/gobike/id1268905943?l=ru",
+                 class: "hero__action"
+
+  .section: .section__wrap.section__wrap--fixed
+    .section__description.section__description--steps
+      h2 Как это работает?
+      p
+        | Депозит 2000 рублей. Стоимость аренды 10 рублей, снимается каждый 30 минут. Если на велосипеде горит синий сигнал - значит велосипед готов к поездке!
+        br
+        | Хороших велосипедных прогулок! Оставлять велосипед обязательно на специальных размеченных площадках.
+
+    .section__image
+      == image_set_tag "app.jpg",
+                      srcset: ['400w', '2x'],
+                      sizes: "100vw",
+                      alt: "Как это работает?"
+
+  .section.section--covered: .section__container
+    h2 Как покататься?
+    p Разблокируй любой велосипед отсканировав на нем QR код — наслаждайся ездой. Для завершения поездки потяни рычажок на замке. Тем самым велоспиед заблокируется, и его можно оставить на велодорожке.
+
+  .section: .section__wrap
+    .section__image
+      == link_to "https://youtu.be/HjkB4kWpDnE", class: "video" do
+        == image_set_tag "movement.jpg",
+                        srcset: ['400w', '700w'],
+                        sizes: "100vw",
+                        alt: "GoBike - Удобная Аренда Велосипедов"
+
+    .section__description.video-description
+      h2 Наслаждайтесь велопрогулками
+      p Прокат подразумевает много способов добраться до места. Не нужно таскать за собой велосипед, чтобы покататься в любимом парке на другом конце города.
+
+  .section.section--app
+    h2 Безналично и безопасно
+    p Не нужно заключать договор или платить наличными
+    == image_set_tag "app.png",
+                    srcset: ['400w', '2x'],
+                    sizes: "100vw",
+                    alt: "Безналично и безопасно"
+
+  .section.section--reviews
+    h3 Отзывы
+    .slider.reviews
+      .frame.js_frame
+        ul.slides.js_slides
+          li.review
+            p
+              | Классная задумка! Сейчас велосипед на даче. Пользуюсь общественным, езжу до работы и обратно. Удобно и заморачиваться не нужно.
+              strong Илья Ерёмин
+          li.review
+            p
+              | Отличный сервис! Вместо того, чтобы стоять в пробках, берите лучше велосипед
+              strong Рафик Хабибуллин
+          li.review
+            p
+              | Давно хотела покататься на велосипеде. Мне понравилось, велосипеды новые, бесшумные.
+              strong Алина Москиева
+          li.review
+            p
+              | Спасибо большое организаторам за открытие проката! Очень красивые велосипеды!
+              strong Олег Курносов
+          li.review
+            p
+              | Велосипеды очень красивые, современные, новые, блестящие. Нам очень понравилось. Спасибо. :)
+              strong Алмаз Каримуллин
+          li.review
+            p
+              | Очень удобные велосипеды! Круто сегодня покатались с друзьями по набережной ;)
+              strong Сергей Антонов
+      ul.slider-dots.dots

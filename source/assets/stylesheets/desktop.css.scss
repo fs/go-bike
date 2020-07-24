@@ -1,0 +1,147 @@
+body {
+  @media (min-width: 800px) {
+    font-size: 16px;
+  }
+}
+
+h3 {
+  @media (min-width: 780px) {
+    font-size: 32px;
+    font-weight: 400;
+  }
+}
+
+h2 {
+  @media (min-width: 990px) {
+    margin: 0 0 24px;
+
+    font-size: 37px;
+    font-weight: 300;
+    line-height: 48px;
+  }
+
+  @media (min-width: 500px) {
+    margin-bottom: 10px;
+
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 650px) {
+  .phone-number {
+    display: inline-block;
+
+    margin-right: 20px;
+
+    vertical-align: middle;
+  }
+
+  .button {
+    height: 36px;
+    margin-top: 0;
+    padding: 0 20px;
+
+    font-size: 15px;
+    line-height: 36px;
+  }
+}
+
+.hero {
+  &__image {
+    @media (min-width: 700px) {
+      width: 100%;
+    }
+  }
+
+  &--cover {
+    @media (min-width: 700px) {
+      background-image: image-url("hero_1024.jpg");
+    }
+
+    @media (min-width: 1024px) {
+      background-image: image-url("hero.jpg");
+    }
+  }
+}
+
+.slider {
+  @media (min-width: 700px) {
+    margin: 50px auto 0;
+  }
+}
+
+.social-accounts {
+  @media (min-width: 500px) {
+    margin: 0 20px 20px;
+  }
+}
+
+.section {
+  &__image {
+    @media (min-width: 780px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__wrap {
+    @media (min-width: 780px) {
+      display: flex;
+
+      justify-content: center;
+    }
+  }
+
+  &__description {
+    @media (min-width: 780px) {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+
+      p {
+        max-width: 80%;
+        margin-left: 10%;
+      }
+
+      h2 {
+        max-width: 90%;
+        margin-left: 10%;
+      }
+    }
+  }
+
+  &--reviews {
+    @media (min-width: 700px) {
+      padding: 80px 20px;
+    }
+  }
+
+  &--app {
+    img {
+      @media (min-width: 600px) {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  &--covered {
+    @media (min-width: 990px) {
+      background-attachment: fixed;
+    }
+
+    @media (min-width: 1024px) {
+      background-image: image-url("cover.jpg");
+    }
+
+    @media (min-width: 700px) {
+      background-image: image-url("cover_1024.jpg");
+    }
+
+    @media (min-width: 400px) {
+      background-image: image-url("cover_700.jpg");
+    }
+  }
+}

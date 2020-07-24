@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.3.4"
+ruby "2.4.9"
 
 gem "middleman-core"
 gem "middleman-sprockets"
